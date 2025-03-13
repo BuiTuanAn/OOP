@@ -13,22 +13,40 @@ public class CharGrid {
 	public CharGrid(char[][] grid) {
 		this.grid = grid;
 	}
-	
+
 	/**
 	 * Returns the area for the given char in the grid. (see handout).
 	 * @param ch char to look for
 	 * @return area for given char
 	 */
 	public int charArea(char ch) {
-		return 0; // YOUR CODE HERE
+		int d=0;
+		for(int i=0;i<grid.length;i++) {
+			for(int j=0;j<grid[i].length;j++) {
+				if(grid[i][j]==ch) {
+					d=d+1;
+				}
+			}
+		}
+		return d;
+
 	}
-	
+
 	/**
 	 * Returns the count of '+' figures in the grid (see handout).
 	 * @return number of + in grid
 	 */
 	public int countPlus() {
-		return 0; // YOUR CODE HERE
+		int t=0;
+		for(int i=0;i<grid.length;i++) {
+			for(int j=0;j<grid[i].length;j++) {
+				if(grid[i][j]=='+') {
+					t=t+1;
+				}
+			}
+		}
+		return t;
+
 	}
-	
+
 }
